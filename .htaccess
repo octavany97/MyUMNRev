@@ -1,0 +1,8 @@
+RewriteEngine on
+
+RewriteRule ^([a-zA-Z0-9]+)$ index.php?page=$1
+RewriteRule ^([a-zA-Z0-9]+)/$ index.php?page=$1
+RewriteRule ([a-zA-Z0-9]+)/([a-zA-Z0-9]+)/$ index.php?page=$1&id=$2
+RewriteRule ([a-zA-Z0-9]+)/([a-zA-Z0-9]+)$ index.php?page=$1&id=$2
+RewriteRule ([a-zA-Z0-9]+)/([a-zA-Z0-9@_.]+)/([a-zA-Z0-9]+)/$ view/changepassword.php?page=$1&email=$2&password=$3
+RewriteRule ([a-zA-Z0-9]+)/([a-zA-Z0-9@_.]+)/([a-zA-Z0-9]+)$ view/changepassword.php?page=$1&email=$2&password=$3
